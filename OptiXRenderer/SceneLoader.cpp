@@ -97,6 +97,16 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
 
             scene->fovy = optix::make_float1(fvalues[9] * PI / 180);
         }
+        else if (cmd == "vertex" && readValues(s, 3, fvalues)) {
+            scene->vertices.push_back(optix::make_float3(fvalues[0], fvalues[1], fvalues[2]));
+        }
+        else if (cmd == "tri" && readValues(s, 3, fvalues)) {
+            Triangle newTriangle;
+            newTriangle.v0 = scene->vertices[fvalues[0]];
+            newTriangle.v1 = scene->vertices[fvalues[1]];
+            newTriangle.v2 = scene->vertices[fvalues[2]];
+            scene->triangles.push_back(newTriangle);
+        }
     }
 
     in.close();

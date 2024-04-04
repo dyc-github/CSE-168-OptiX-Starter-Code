@@ -17,13 +17,13 @@ rtDeclareVariable(int1, frameID, , );
 // Camera info 
 
 // TODO:: delcare camera varaibles here
-rtDeclareVariable(float1, height, , );
-rtDeclareVariable(float1, width, , );
+rtDeclareVariable(float, height, , );
+rtDeclareVariable(float, width, , );
 
 rtDeclareVariable(float3, eye, ,);
 rtDeclareVariable(float3, center, , );
 rtDeclareVariable(float3, up, , );
-rtDeclareVariable(float1, fovy, , );
+rtDeclareVariable(float, fovy, , );
 
 
 
@@ -36,12 +36,12 @@ RT_PROGRAM void generateRays()
     // TODO: calculate the ray direction (change the following lines)
     optix::float3 w = optix::normalize(eye-center);
     optix::float3 u = optix::normalize(optix::cross(up, w));
-    optix::float3 v = optix::cross(w, u);
+    optix::float3 v = -optix::cross(w, u); //Im not sure why but it seems that I need to flip the up axis
 
-    float fovx = 2 * atanf(width.x * tanf(fovy.x / 2) / height.x);
+    float fovx = 2 * atan(width * tan(fovy/ 2) / height);
 
-    float alpha = -tan(fovx / 2) * ((launchIndex.y + .5) - (width.x / 2)) / (width.x / 2);
-    float beta = tan(fovy.x / 2) * ((height.x / 2) - (launchIndex.x + .5)) / (height.x / 2);
+    float alpha = tan(fovx / 2) * ((launchIndex.x + .5) - (width / 2)) / (width / 2);
+    float beta = tan(fovy / 2) * ((height / 2) - (launchIndex.y + .5)) / (height / 2);
 
     
 

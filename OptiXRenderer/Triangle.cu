@@ -18,6 +18,21 @@ RT_PROGRAM void intersect(int primIndex)
     float t;
 
     // TODO: implement triangle intersection test here
+    float3 normal = normalize(cross(tri.v2 - tri.v0, tri.v1 - tri.v0));
+    
+    t = (dot(tri.v0, normal) - dot(ray.origin, normal)) / dot(ray.direction, normal);
+    
+    //barycentric coordinates: https://cdn-uploads.piazza.com/paste/kfpn5k0uz5667e/24c3d2d5ce14011276b44c34986dfdae4bae9865111501bb37f4a24ab361e365/cse167_week4_discussion.pdf
+    float3 p = t * ray.direction + ray.origin;
+
+    float alpha = (-(p.x - tri.v1.x) * (tri.v2.y - tri.v1.y) + (p.y - tri.v1.y) * (tri.v2.x - tri.v1.x))/
+        (-(tri.v0.x - tri.v1.x)*(tri.v2.y - tri.v1.y) + (tri.v0.y-tri.v1.y)*(tri.v2.x - tri.v1.x));
+    float beta = (-(p.x - tri.v2.x) * (tri.v0.y - tri.v2.y) + (p.y - tri.v2.y) * (tri.v0.x - tri.v2.x)) /
+        (-(tri.v1.x - tri.v2.x) * (tri.v0.y - tri.v2.y) + (tri.v1.y - tri.v2.y) * (tri.v0.x - tri.v2.x));
+    float gamma = 1 - alpha - beta;
+    if (alpha < 0 || alpha > 1 || beta < 0 || beta > 1 || gamma < 0 || gamma > 1) {
+        return;
+    }
 
     // Report intersection (material programs will handle the rest)
     if (rtPotentialIntersection(t))

@@ -40,16 +40,14 @@ RT_PROGRAM void generateRays()
 
     float fovx = 2 * atanf(width.x * tanf(fovy.x / 2) / height.x);
 
-    float alpha = -tan(fovx / 2) * (launchIndex.y - (width.x / 2)) / (width.x / 2);
-    float beta = tan(fovy.x / 2) * ((height.x / 2) - launchIndex.x) / (height.x / 2);
+    float alpha = -tan(fovx / 2) * ((launchIndex.y + .5) - (width.x / 2)) / (width.x / 2);
+    float beta = tan(fovy.x / 2) * ((height.x / 2) - (launchIndex.x + .5)) / (height.x / 2);
 
     
 
     float3 origin = eye; 
     float3 dir = normalize(alpha * u + beta * v - w);
     float epsilon = 0.001f; 
-
-    rtPrintf("launch indices: %i %i\ndir: % f % f % f\n", launchIndex.x, launchIndex.y, dir.x, dir.y, dir.z);
 
     // TODO: modify the following lines if you need
     // Shoot a ray to compute the color of the current pixel

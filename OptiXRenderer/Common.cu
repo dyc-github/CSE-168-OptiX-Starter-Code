@@ -12,7 +12,7 @@ RT_PROGRAM void miss()
 {
     // Set the result to be the background color if miss
     // TODO: change the color to backgroundColor
-    payload.radiance = make_float3(1, 0, 0);
+    payload.radiance = make_float3(0, 0, 0);
     payload.done = true;
 }
 

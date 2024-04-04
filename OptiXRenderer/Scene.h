@@ -23,6 +23,10 @@ struct Scene
     std::vector<PointLight> plights;
 
     // TODO: add other variables that you need here
+    optix::float3 eye;
+    optix::float3 center;
+    optix::float3 up;
+    optix::float1 fovy;
 
     Scene()
     {

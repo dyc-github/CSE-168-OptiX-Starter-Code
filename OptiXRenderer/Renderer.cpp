@@ -140,6 +140,10 @@ void Renderer::buildScene()
     material->setAnyHitProgram(1, programs["shadowCaster"]);
 
     // TODO: pass data to programs here
+    programs["rayGen"]["center"]->setFloat(scene->center);
+    programs["rayGen"]["eye"]->setFloat(scene->eye);
+    programs["rayGen"]["up"]->setFloat(scene->up);
+    programs["rayGen"]["fovy"]->setFloat(scene->fovy.x);
 
     // Create buffers and pass them to Optix programs that the buffers
     Buffer triBuffer = createBuffer(scene->triangles);

@@ -1,4 +1,13 @@
 #include "SceneLoader.h"
+#define PI 3.14159265
+
+optix::float3 upvector(optix::float3 up, optix::float3 zvec) {
+    optix::float3 x = optix::cross(up, zvec);
+    optix::float3 y = optix::cross(zvec, x);
+    optix::float3 ret = optix::normalize(y);
+    return ret;
+
+}
 
 void SceneLoader::rightMultiply(const optix::Matrix4x4& M)
 {
@@ -78,9 +87,21 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
             scene->outputFilename = svalues[0];
         }
         // TODO: use the examples above to handle other commands
+        //Camera: 3 eye 3 cen 3 up 1 fovy 
+        else if (cmd == "camera" && readValues(s, 10, fvalues)) {
+            scene->eye = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+            scene->center = optix::make_float3(fvalues[3], fvalues[4], fvalues[5]);
+            
+            optix::float3 upinit = optix::make_float3(fvalues[6], fvalues[7], fvalues[8]);
+            scene->up = upvector(upinit, scene->eye - scene->center);
+
+            scene->fovy = optix::make_float1(fvalues[9] * PI / 180);
+        }
     }
 
     in.close();
 
     return scene;
 }
+
+

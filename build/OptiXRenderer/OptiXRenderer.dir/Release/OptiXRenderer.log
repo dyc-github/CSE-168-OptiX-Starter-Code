@@ -1,0 +1,9 @@
+﻿  SceneLoader.cpp
+C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\SceneLoader.cpp(98,62): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\SceneLoader.cpp(105,55): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\SceneLoader.cpp(106,55): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\SceneLoader.cpp(107,55): warning C4244: 'argument': conversion from 'float' to 'const unsigned __int64', possible loss of data
+C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\SceneLoader.cpp(77,13): warning C4101: 'ivalues': unreferenced local variable
+  OptiXRenderer.vcxproj -> C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\bin\Release\OptiXRenderer.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

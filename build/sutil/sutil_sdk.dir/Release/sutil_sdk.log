@@ -1,0 +1,15 @@
+﻿  Building Custom Rule C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/sutil/CMakeLists.txt
+  rply.c
+  glew.c
+  Arcball.cpp
+  HDRLoader.cpp
+  Mesh.cpp
+  OptiXMesh.cpp
+  PPMLoader.cpp
+  sutil.cpp
+  tiny_obj_loader.cc
+     Creating library C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/lib/Release/sutil_sdk.lib and object C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/lib/Release/sutil_sdk.exp
+  sutil_sdk.vcxproj -> C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\bin\Release\sutil_sdk.dll
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  -- Copying if different C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/support/freeglut/win64/Release/freeglut.dll to C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/bin/Release/freeglut.dll

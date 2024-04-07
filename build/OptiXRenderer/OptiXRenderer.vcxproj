@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{75E551CB-EF81-3E6B-896B-C810C1631CA1}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>OptiXRenderer</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\bin\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OptiXRenderer.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">OptiXRenderer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\bin\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OptiXRenderer.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">OptiXRenderer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\bin\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">OptiXRenderer.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">OptiXRenderer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\bin\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">OptiXRenderer.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">OptiXRenderer</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\Debug\sutil_sdk.lib;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\lib64\optix.6.5.0.lib;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\win64\Release\freeglut.lib;opengl32.lib;glu32.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\lib\x64\nvrtc.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/lib/Debug/OptiXRenderer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/bin/Debug/OptiXRenderer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4355;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\Release\sutil_sdk.lib;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\lib64\optix.6.5.0.lib;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\win64\Release\freeglut.lib;opengl32.lib;glu32.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\lib\x64\nvrtc.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/lib/Release/OptiXRenderer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/bin/Release/OptiXRenderer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DisableSpecificWarnings>4355;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\MinSizeRel\sutil_sdk.lib;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\lib64\optix.6.5.0.lib;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\win64\Release\freeglut.lib;opengl32.lib;glu32.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\lib\x64\nvrtc.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/lib/MinSizeRel/OptiXRenderer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/bin/MinSizeRel/OptiXRenderer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4355;4996</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_USE_MATH_DEFINES;NOMINMAX;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\include\optixu;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\mdl-sdk\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\include;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\lib\RelWithDebInfo\sutil_sdk.lib;C:\ProgramData\NVIDIA Corporation\OptiX SDK 6.5.0\lib64\optix.6.5.0.lib;C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\support\freeglut\win64\Release\freeglut.lib;opengl32.lib;glu32.lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\lib\x64\nvrtc.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/lib/RelWithDebInfo/OptiXRenderer.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/bin/RelWithDebInfo/OptiXRenderer.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/OptiXRenderer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code -BC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build --check-stamp-file C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/OptiXRenderer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\OptiXRenderer\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/OptiXRenderer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code -BC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build --check-stamp-file C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/OptiXRenderer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\OptiXRenderer\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/OptiXRenderer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code -BC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build --check-stamp-file C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/OptiXRenderer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\OptiXRenderer\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/OptiXRenderer/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code -BC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build --check-stamp-file C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/OptiXRenderer/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\OptiXRenderer\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\main.cpp" />
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Renderer.cpp" />
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\SceneLoader.cpp" />
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\utils.cpp" />
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\lodepng.cpp" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\main.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Renderer.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\SceneLoader.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\utils.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\lodepng.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Scene.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Light.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Geometries.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Payloads.h" />
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\random.h" />
+    <None Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\PinholeCamera.cu">
+    </None>
+    <None Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\RayTracer.cu">
+    </None>
+    <None Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Triangle.cu">
+    </None>
+    <None Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Sphere.cu">
+    </None>
+    <None Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\OptiXRenderer\Common.cu">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\ZERO_CHECK.vcxproj">
+      <Project>{4DD7F351-94E3-33D1-9C3B-2DF28F2E9FC9}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\sutil\sutil_sdk.vcxproj">
+      <Project>{392FAC7A-E27A-3C37-A80D-1B24BB159A82}</Project>
+      <Name>sutil_sdk</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

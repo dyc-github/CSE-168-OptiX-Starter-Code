@@ -1,0 +1,10 @@
+^C:\USERS\DAVID\CODE_PROJECTS\CSE168\CSE-168-OPTIX-STARTER-CODE\SUTIL\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code -BC:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build --check-stamp-file C:/Users/David/code_projects/CSE168/CSE-168-OptiX-Starter-Code/build/sutil/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

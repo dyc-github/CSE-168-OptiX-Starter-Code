@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\rply-1.01\rply.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\Arcball.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\HDRLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\Mesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\OptiXMesh.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\PPMLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\sutil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\tinyobjloader\tiny_obj_loader.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\glew.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\cuda\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\cuda\helpers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\cuda\intersection_refinement.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\cuda\phong.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\cuda\random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\rply-1.01\rply.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\Arcball.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\HDRLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\Mesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\OptiXMesh.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\PPMLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\build\sampleConfig.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\sutil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\sutilapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\tinyobjloader\tiny_obj_loader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\GL\glew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\GL\wglew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\sutil\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\cuda\phong.cu">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="C:\Users\David\code_projects\CSE168\CSE-168-OptiX-Starter-Code\cuda\triangle_mesh.cu">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{42D7B907-0CB1-3F06-A298-095EF9B12E31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{088BA6EA-DC84-3B82-9B5D-F61D578FD470}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

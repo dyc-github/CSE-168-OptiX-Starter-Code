@@ -25,12 +25,16 @@ RT_PROGRAM void intersect(int primIndex)
     //barycentric coordinates: https://cdn-uploads.piazza.com/paste/kfpn5k0uz5667e/24c3d2d5ce14011276b44c34986dfdae4bae9865111501bb37f4a24ab361e365/cse167_week4_discussion.pdf
     float3 p = t * ray.direction + ray.origin;
 
+ 
+    //printf("ray:%.2f %.2f %.2f\ntri:\n%.2f %.2f %.2f\n%.2f %.2f %.2f\n%.2f %.2f %.2f\n", p.x, p.y, p.z, tri.v0.x, tri.v0.y, tri.v0.z, tri.v1.x, tri.v1.y, tri.v1.z, tri.v2.x, tri.v2.y, tri.v2.z);
+
     float alpha = (-(p.x - tri.v1.x) * (tri.v2.y - tri.v1.y) + (p.y - tri.v1.y) * (tri.v2.x - tri.v1.x))/
         (-(tri.v0.x - tri.v1.x)*(tri.v2.y - tri.v1.y) + (tri.v0.y-tri.v1.y)*(tri.v2.x - tri.v1.x));
     float beta = (-(p.x - tri.v2.x) * (tri.v0.y - tri.v2.y) + (p.y - tri.v2.y) * (tri.v0.x - tri.v2.x)) /
         (-(tri.v1.x - tri.v2.x) * (tri.v0.y - tri.v2.y) + (tri.v1.y - tri.v2.y) * (tri.v0.x - tri.v2.x));
     float gamma = 1 - alpha - beta;
-    if (alpha < 0 || alpha > 1 || beta < 0 || beta > 1 || gamma < 0 || gamma > 1) {
+    printf("% .2f % .2f % .2f\n", alpha, beta, gamma);
+    if (alpha < 0 || alpha >= 1 || beta < 0 || beta >= 1 || gamma < 0 || gamma >= 1) {
         return;
     }
 
@@ -40,7 +44,7 @@ RT_PROGRAM void intersect(int primIndex)
         // Pass attributes
 
         // TODO: assign attribute variables here
-
+        attrib = tri.attributes;
         rtReportIntersection(0);
     }
 }

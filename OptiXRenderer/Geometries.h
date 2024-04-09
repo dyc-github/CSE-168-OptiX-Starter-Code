@@ -7,6 +7,12 @@
  * Structures describing different geometries should be defined here.
  */
 
+struct Attributes
+{
+    // TODO: define the attributes structure
+    optix::float3 ambient;
+};
+
 struct Triangle
 {
     
@@ -14,21 +20,13 @@ struct Triangle
     optix::float3 v0;
     optix::float3 v1;
     optix::float3 v2;
-
+    Attributes attributes;
 };
 
 struct Sphere
 {
-
-
     // TODO: define the sphere structure
-
+    Attributes attributes;
 
 };
 
-struct Attributes
-{
-    
-
-    // TODO: define the attributes structure
-};

@@ -25,7 +25,7 @@ RT_PROGRAM void intersect(int primIndex)
         // Pass attributes
 
         // TODO: assign attribute variables here
-
+        attrib = sphere.attributes;
         rtReportIntersection(0);
     }
 }

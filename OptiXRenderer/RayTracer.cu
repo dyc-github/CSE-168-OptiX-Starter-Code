@@ -24,6 +24,6 @@ RT_PROGRAM void closestHit()
 {
     // TDOO: calculate the color using the Blinn-Phong reflection model
 
-    float3 result = make_float3(0, 1, 0);
+    float3 result = attrib.ambient;
     payload.radiance = result;
 }

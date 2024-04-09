@@ -11,6 +11,10 @@ struct Attributes
 {
     // TODO: define the attributes structure
     optix::float3 ambient;
+    optix::float3 diffuse;
+    optix::float3 specular;
+    optix::float3 emission;
+    optix::float3 shininess;
 };
 
 struct Triangle

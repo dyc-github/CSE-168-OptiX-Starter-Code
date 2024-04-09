@@ -139,6 +139,18 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
         else if (cmd == "ambient" && readValues(s, 3, fvalues)) {
             currentAttributes.ambient = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
         }
+        else if (cmd == "diffuse" && readValues(s, 3, fvalues)) {
+            currentAttributes.diffuse = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+        }
+        else if (cmd == "specular" && readValues(s, 3, fvalues)) {
+            currentAttributes.specular = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+        }
+        else if (cmd == "shininess" && readValues(s, 3, fvalues)) {
+            currentAttributes.shininess = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+        }
+        else if (cmd == "emission" && readValues(s, 3, fvalues)) {
+            currentAttributes.emission = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+        }
     }
 
     in.close();

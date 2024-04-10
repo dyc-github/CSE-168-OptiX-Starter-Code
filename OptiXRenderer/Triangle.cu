@@ -10,6 +10,8 @@ rtDeclareVariable(Ray, ray, rtCurrentRay, );
 
 // Attributes to be passed to material programs 
 rtDeclareVariable(Attributes, attrib, attribute attrib, );
+rtDeclareVariable(float3, intersectionPos, attribute intersectionPosition, );
+rtDeclareVariable(float3, normal, attribute normal, );
 
 RT_PROGRAM void intersect(int primIndex)
 {
@@ -18,11 +20,11 @@ RT_PROGRAM void intersect(int primIndex)
     float t;
 
     // TODO: implement triangle intersection test here
-    float3 normal = normalize(cross(tri.v2 - tri.v0, tri.v1 - tri.v0));
+    float3 norm = normalize(cross(tri.v2 - tri.v0, tri.v1 - tri.v0));
     
-    t = (dot(tri.v0, normal) - dot(ray.origin, normal)) / dot(ray.direction, normal);
+    t = (dot(tri.v0, norm) - dot(ray.origin, norm)) / dot(ray.direction, norm);
     
-    //barycentric coordinates: https://cdn-uploads.piazza.com/paste/kfpn5k0uz5667e/24c3d2d5ce14011276b44c34986dfdae4bae9865111501bb37f4a24ab361e365/cse167_week4_discussion.pdf
+    //Barycentric Approach.Reference.https://ceng2.ktu.edu.tr/~cakir/files/grafikler/Texture_Mapping.pdf
     float3 p = t * ray.direction + ray.origin;
     //vector from v0 to the point of intersection(p)
     optix::float3 AP = p - tri.v0;
@@ -49,9 +51,9 @@ RT_PROGRAM void intersect(int primIndex)
     if (rtPotentialIntersection(t))
     {
         // Pass attributes
-
-        // TODO: assign attribute variables here
         attrib = tri.attributes;
+        intersectionPos = p;
+        normal = norm;
         rtReportIntersection(0);
     }
 }

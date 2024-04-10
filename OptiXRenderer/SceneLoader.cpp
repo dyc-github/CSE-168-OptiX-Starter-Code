@@ -53,12 +53,14 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
     }
 
     auto scene = std::make_shared<Scene>();
+    scene->attenuation = optix::make_float3(1,0,0);
 
     transStack.push(optix::Matrix4x4::identity());
 
     std::string str, cmd;
     Attributes currentAttributes;
     currentAttributes.ambient = optix::make_float3(.2, .2, .2);
+    currentAttributes.emission = optix::make_float3(0, 0, 0);
 
     // Read a line in the scene file in each iteration
     while (std::getline(in, str))
@@ -88,8 +90,6 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
         {
             scene->outputFilename = svalues[0];
         }
-        // TODO: use the examples above to handle other commands
-        //Camera: 3 eye 3 cen 3 up 1 fovy 
         else if (cmd == "camera" && readValues(s, 10, fvalues)) {
             scene->eye = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
             scene->center = optix::make_float3(fvalues[3], fvalues[4], fvalues[5]);
@@ -102,15 +102,14 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
             scene->vertices.push_back(optix::make_float3(fvalues[0], fvalues[1], fvalues[2]));
         }
         else if (cmd == "tri" && readValues(s, 3, fvalues)) {
-            Triangle newTriangle;
-            newTriangle.v0 = transformPoint(scene->vertices[fvalues[0]]);
-            newTriangle.v1 = transformPoint(scene->vertices[fvalues[1]]);
-            newTriangle.v2 = transformPoint(scene->vertices[fvalues[2]]);
-            newTriangle.attributes = currentAttributes;
-            scene->triangles.push_back(newTriangle);
+            Triangle triangle;
+            triangle.v0 = transformPoint(scene->vertices[fvalues[0]]);
+            triangle.v1 = transformPoint(scene->vertices[fvalues[1]]);
+            triangle.v2 = transformPoint(scene->vertices[fvalues[2]]);
+            triangle.attributes = currentAttributes;
+            scene->triangles.push_back(triangle);
         }
         else if (cmd == "translate" && readValues(s, 3, fvalues)) {
-            std::cout << "translate" << std::endl;
             optix::Matrix4x4 translate = optix::Matrix4x4::translate(optix::make_float3(fvalues[0], fvalues[1], fvalues[2]));
             rightMultiply(translate);
         }
@@ -130,12 +129,21 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
         else if (cmd == "popTransform") {
             transStack.pop();
         }
-        /*
-            diffuse r g b specifies the diffuse color of the surface.
-            specular r g b specifies the specular color of the surface.
-            shininess s specifies the shininess of the surface.
-            emission r g b gives the emissive color of the surface.
-        */
+        else if (cmd == "directional" && readValues(s, 6, fvalues)) {
+            DirectionalLight directionalLight;
+            directionalLight.dir = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+            directionalLight.color = optix::make_float3(fvalues[3], fvalues[4], fvalues[5]);
+            scene->dlights.push_back(directionalLight);
+        }
+        else if (cmd == "point" && readValues(s, 6, fvalues)) {
+            PointLight pointLight;
+            pointLight.pos = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+            pointLight.color = optix::make_float3(fvalues[3], fvalues[4], fvalues[5]);
+            scene->plights.push_back(pointLight);
+        }
+        else if (cmd == "attenuation" && readValues(s, 3, fvalues)) {
+            scene->attenuation = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+        }
         else if (cmd == "ambient" && readValues(s, 3, fvalues)) {
             currentAttributes.ambient = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
         }
@@ -145,12 +153,13 @@ std::shared_ptr<Scene> SceneLoader::load(std::string sceneFilename)
         else if (cmd == "specular" && readValues(s, 3, fvalues)) {
             currentAttributes.specular = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
         }
-        else if (cmd == "shininess" && readValues(s, 3, fvalues)) {
-            currentAttributes.shininess = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
+        else if (cmd == "shininess" && readValues(s, 1, fvalues)) {
+            currentAttributes.shininess = fvalues[0];
         }
         else if (cmd == "emission" && readValues(s, 3, fvalues)) {
             currentAttributes.emission = optix::make_float3(fvalues[0], fvalues[1], fvalues[2]);
         }
+
     }
 
     in.close();

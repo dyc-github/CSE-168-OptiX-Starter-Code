@@ -10,6 +10,8 @@ rtDeclareVariable(Ray, ray, rtCurrentRay, );
 
 // Attributes to be passed to material programs 
 rtDeclareVariable(Attributes, attrib, attribute attrib, );
+rtDeclareVariable(float3, intersectionPos, attribute intersectionPosition, );
+rtDeclareVariable(float3, normal, attribute normal, );
 
 RT_PROGRAM void intersect(int primIndex)
 {
@@ -26,6 +28,8 @@ RT_PROGRAM void intersect(int primIndex)
 
         // TODO: assign attribute variables here
         attrib = sphere.attributes;
+        intersectionPos = make_float3(0, 0, 0);
+        normal = make_float3(0,0,0);
         rtReportIntersection(0);
     }
 }

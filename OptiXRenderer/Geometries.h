@@ -14,7 +14,7 @@ struct Attributes
     optix::float3 diffuse;
     optix::float3 specular;
     optix::float3 emission;
-    optix::float3 shininess;
+    float shininess;
 };
 
 struct Triangle

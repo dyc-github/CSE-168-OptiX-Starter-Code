@@ -145,6 +145,9 @@ void Renderer::buildScene()
     programs["rayGen"]["up"]->setFloat(scene->up);
     programs["rayGen"]["fovy"]->setFloat(scene->fovy.x);
 
+    programs["raytracer"]["origin"]->setFloat(scene->eye);
+    programs["raytracer"]["attenuation"]->setFloat(scene->attenuation);
+
     // Create buffers and pass them to Optix programs that the buffers
     Buffer triBuffer = createBuffer(scene->triangles);
     programs["triInt"]["triangles"]->set(triBuffer);

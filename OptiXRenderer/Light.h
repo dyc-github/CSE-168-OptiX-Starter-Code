@@ -9,18 +9,14 @@
 
 struct PointLight
 {
-
-
     // TODO: define the point light structure
-
-
+    optix::float3 pos;
+    optix::float3 color;
 };
 
 struct DirectionalLight
 {
-
-
     // TODO: define the directional light structure
-
-
+    optix::float3 dir;
+    optix::float3 color;
 };
